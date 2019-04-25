@@ -1,0 +1,46 @@
+/** Normalize Css - Normalize element bhevaiour for all browsers **/
+* { box-sizing: border-box; }
+
+html, body {
+    background: @white;
+    font-family: 'open_sansregular';
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main, header, footer { display: block; }
+
+html, body, h1, h2, h3, h4, h5, h6, figure, ul, p { margin: 0; padding: 0; }
+
+h1 { font-size: 24px; }
+h2 { font-size: 22px; }
+h3 { font-size: 20px; }
+h4 { font-size: 18px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+li { list-style: none; }
+
+a {
+    color: @globalColor;
+    text-decoration: none;
+    outline: none;
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+    }
+}
+
+img { border: none; }
+
+button { 
+    background-color: transparent;
+    border: none; 
+    padding: 0; 
+    outline: none; 
+}
+
+a, button {
+    -webkit-tap-highlight-color: transparent;
+}

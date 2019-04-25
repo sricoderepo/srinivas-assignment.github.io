@@ -1,0 +1,243 @@
+/** Responsive styles **/
+@media (max-width: 700px) {
+    header {
+        nav {
+            ul {
+                &.navSection {
+                    li {
+                        &.logo {
+                            flex-grow: 1;
+                            position: relative;
+                        }
+                        &.primary, &.secondary {
+                            display: none;
+                        }
+                        &.mobileMenu {
+                            display: block;
+                            a {
+                                &.hamburgerNav {
+                                    font-size: 0;
+                                    padding: 0 25px 0 35px;
+                                    position: relative;
+                                    p {
+                                        background: @white;
+                                        height: 3px;
+                                        left: 13px;
+                                        position: absolute;
+                                        top: 23px;
+                                        width: 24px;
+                                        &:before, &:after {
+                                            border-top: 3px solid @white;
+                                            content: "";
+                                            left: 0;
+                                            position: absolute;
+                                            right: 0;
+                                        }
+                                        &:before {
+                                            top: -9px;
+                                        }
+                                        &:after {
+                                            top: 9px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .mobileNavPopup {
+            background-color: @white;
+            border-radius: 4px;
+            box-shadow: 0 50px 100px -20px rgba(50,50,93,.25), 0 30px 60px -30px rgba(0,0,0,.3), 0 -18px 60px -10px rgba(0,0,0,.025);
+            left: 10px;
+            min-height: 100px;
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            .closeBtn {
+                font-size: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+                width: 50px;
+                &:after, &:before {
+                    background-color: @globalColor;
+                    content: '';
+                    height: 3px;
+                    width: 23px;
+                    position: absolute;
+                    left: 14px;
+                    top: 22px;
+                }
+                &:before {
+                    transform: rotate(45deg);
+                }
+                &:after {
+                    transform: rotate(-45deg);
+                }
+            }
+            .mobileNavSection {
+                padding: 20px 0;
+                h6 {
+                    color: #8898aa;
+                    font-family: 'open_sansbold';
+                    font-weight: 600;
+                    line-height: 40px;
+                    padding-left: 25px;
+                    text-transform: uppercase;
+                }
+                .mobileNavList {
+                    font-family: inherit;
+                    ul {
+                        li {
+                            a {
+                                color: @globalColor;
+                                font-size: 20px;
+                                font-weight: 500;
+                                padding: 0 25px;
+                                text-transform: capitalize;
+                            }
+                            &:nth-child(2) {
+                                a {
+                                    color: #24b47e;
+                                }
+                            }
+                            &:nth-child(3) {
+                                a {
+                                    color: #3297d3;
+                                }
+                            }
+                        }
+                        &:first-child {
+                            li {
+                                &:last-child {
+                                    a {
+                                        color: #8f6ed5;
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child {
+                            li {
+                                a {
+                                    .badge {
+                                        background: #6772e5;
+                                        border-radius: 10px;
+                                        color: @white;
+                                        font-size: 10px;
+                                        font-weight: 700;
+                                        height: auto;
+                                        letter-spacing: 1px;
+                                        margin-left: 2px;
+                                        padding: 2px 4px 1px;
+                                        position: relative;
+                                        text-transform: uppercase;
+                                        top: -3px;
+                                    }
+                                }
+                                &:first-child {
+                                    a {
+                                        color: #e39f48;
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    a {
+                                        color: #b76ac4;
+                                    }
+                                }
+                            }
+                        }
+                        &#mobileNavProductList {
+                            li {
+                                a {
+                                    background-repeat: no-repeat;
+                                    background-position: left 22px center;
+                                    background-size: 26px 26px;
+                                    padding-left: 60px;
+                                }
+                                &:first-child {
+                                    a {
+                                        background-image: url("../images/product-icon.png");
+                                    }
+                                }
+                                &:nth-child(2) {
+                                    a {
+                                        background-image: url("../images/billing-icon.png");
+                                    }
+                                }
+                                &:nth-child(3) {
+                                    a {
+                                        background-image: url("../images/connect-icon.png");
+                                    }
+                                }
+                                &:last-child {
+                                    a {
+                                        background-image: url("../images/sigma-icon.png");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .mobileSecondaryNav {
+                border-top: 2px solid #f6f9fc;
+                padding: 15px 10px;
+                ul {
+                    li {
+                        a {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            .mobileSecondaryNav, .mobileNavList {
+                display: flex;
+                ul {
+                    flex-grow: 3;
+                    li {
+                        a {
+                            display: block;
+                            padding: 0 20px;
+                            min-width: 100px;
+                            line-height: 50px;
+                            svg {
+                                display: inline-block;
+                                width: 26px;
+                                height: 26px;
+                                margin: 0 10px 0 -3px;
+                                vertical-align: -6px;
+                            }
+                        }
+                    }
+                    &:first-child {
+                        flex-grow: 1;
+                    }
+                }
+            }
+            .mobileSignIn {
+                a {
+                    background-color: #f6f9fc;
+                    border-radius: 0 0 4px 4px;
+                    display: block;
+                    font-size: 15px;
+                    font-weight: 600;
+                    line-height: 40px;
+                    padding: 12px 30px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 480px) {
+    header {
+        .mobileNavPopup {
+            .mobileSecondaryNav, .mobileNavList {
+                display: inline-block;
+            }
+        }
+    }
+}
